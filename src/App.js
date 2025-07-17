@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        this is 2nd image 
+        Updating Deplyemnt version 1.0.1
         </p>
         <a
           className="App-link"
