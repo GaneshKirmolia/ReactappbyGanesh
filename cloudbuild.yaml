@@ -19,13 +19,13 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v2'
+      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3'
       - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v2'
+      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3'
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
@@ -34,7 +34,7 @@ steps:
       - 'deploy'
       - 'app-service'  # or your preferred Cloud Run service name
       - '--image'
-      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v2'
+      - 'us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3'
       - '--platform'
       - 'managed'
       - '--region'
