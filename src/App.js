@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Updating Deplyemnt version 1.0.1
+        Checking thrigger from my end
         </p>
         <a
           className="App-link"
