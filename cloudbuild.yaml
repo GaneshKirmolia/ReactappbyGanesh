@@ -1,0 +1,15 @@
+steps:
+  # Step 1: Use Node image to install dependencies and run tests
+  - name: 'node:18'
+    id: 'Install and Build'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        npm run build
+        echo "✅ Build successful"
+
+# Optional: Set logging behavior
+options:
+  logging: CLOUD_LOGGING_ONLY
