@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Checking thrigger from my end
+        checking cloudbuild trigger working or cloud run deply or not
         </p>
         <a
           className="App-link"
