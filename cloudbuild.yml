@@ -1,0 +1,17 @@
+steps:
+  # build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3", "."]
+  # push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3"]
+  # deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=kubernetes-resource-file
+  - --image=us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3
+  - --location=us-west2
+  - --cluster=cluster1
+options:
+  logging: CLOUD_LOGGING_ONLY
