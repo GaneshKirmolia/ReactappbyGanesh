@@ -12,6 +12,6 @@ steps:
   - --filename=deployment.yml
   - --image=us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3
   - --location=us-west2
-  - --cluster=cluster1
+  - --cluster=deployment-1-cluster
 options:
   logging: CLOUD_LOGGING_ONLY
