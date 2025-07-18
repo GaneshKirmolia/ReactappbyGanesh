@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: west2-docker.pkg.dev/gcp-devops-july/reactrepo/app:v3
+          image: us-west2-docker.pkg.dev/gcp-devops-july/reactrepo/app
           ports:
             - containerPort: 3000
 ---
